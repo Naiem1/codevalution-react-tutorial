@@ -1,70 +1,90 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## what is React.js
+1. React.js is open source library.For building user interfaces
+   
+2. React.js is a library not framework.
+3. Focus on UI.React does not focus other part on the application like routing and http request.It is responsible for reach user interfaces.
+4. Rich ecosystem.
+5. Created and maintained by facebook.
 
-## Available Scripts
+## Technical aspect of React.js
+1. React is component based Architecture
+2. Reuseable component.
 
-In the project directory, you can run:
+### React is declarative. 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## create-react-app
+---
+ | npx  | npm  |
+ |----- | ------|
+ |*npx create-react-app project_name* | npm install create-react-app -g|
+ |npm package runner | *create-react-app project_name* |
+ | install node | npm globally |
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ ## **Component type**
+ 1. **Stateless Functional component**
 
-### `npm run build`
+```stateless component
+//JavaScript Function
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Stateful Class Component**
+```stateful class Component
+//JavaScript class. class extending component class Render method returning HTML
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+class Welcome extends React.Component{
+  render() {
+    return <h1>Hello, {this.props.name}</h1>
+  }
+}
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## **Functional Component** vs **Class Component**
+|        Functional           |         class       |
+|     ----------              | -------             |
+|Simple functions | More features rich
+|Use func component as much possible | Maintain their own private data - state|
+|Absence of `this ` keyword| Complex UI logic|
+|Solution without using state| Provided life cycle hooks|
+|Mainly responsible for the UI|     ---|
+|Stateless/Dumb/Presentational| ---    |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## **`JSX`**
+* Javascript `XML` (`JSX`) = Extension to the JavaScript language syntax.
+* Write `XML`- like code for elements and components.
+* `JSX`   tags have a tag name, attributes, and children.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **Necessity of JSX**
+* `JSX` is not necessity to write React application(we can write code without using `JSX`)
+* `JSX` makes your react code simpler and elegant.
+* `JSX` ultimately transpile to pure JavaScript which is understood by the browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **How does `JSX` word behind the seen**
 
-### Code Splitting
+1. `JSX` is a `syntactic` sugar to write `React.createElement`
+2. JSX on the other hand we will keep the code elegant,simple and readable
+3. .
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## **Props**
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## **props vs State**
+|props| state|
+|-----|------|
+|`props` get passed to the component| `state` is managed within the component|
+|Function parameters|variables declared in the function body|
+|`props` are immutable| `state` can be changed|
+|`props`-Functional Components| `useState` Hooks - functional components|
+|`this.prop` - class components| `this.state` - class components|
