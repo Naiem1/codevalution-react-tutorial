@@ -74,6 +74,17 @@ class Welcome extends React.Component{
 ### **How does `JSX` word behind the seen**
 
 1. `JSX` is a `syntactic` sugar to write `React.createElement`
-2. JSX on the other hand we will keep the code elegant,simple and readable.
+2. JSX on the other hand we will keep the code elegant,simple and readable
+3. .
 
 ## **Props**
+
+
+## **props vs State**
+|props| state|
+|-----|------|
+|`props` get passed to the component| `state` is managed within the component|
+|Function parameters|variables declared in the function body|
+|`props` are immutable| `state` can be changed|
+|`props`-Functional Components| `useState` Hooks - functional components|
+|`this.prop` - class components| `this.state` - class components|
